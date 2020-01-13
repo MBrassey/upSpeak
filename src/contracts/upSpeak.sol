@@ -4,15 +4,18 @@ contract upSpeak {
     string public name;
     uint256 public topicCount = 0;
     uint public postCount = 0;
+    
+    constructor() public {
+        name = "upSpeak";
+    }
+
     mapping (uint => Topic) public topics;
     mapping(uint => Post) public posts;
 
     struct Topic {
         uint _id;
         string _topicName;
-        string _authorAddress;
-        address charged author;
-        address payable upSpeakWallet;        
+        address payable wallet;
     }
 
     struct Post {
@@ -20,7 +23,14 @@ contract upSpeak {
         string content;
         uint tipAmount;
         address payable author;
+        string _topicName;
     }
+
+    event TopicCreated(
+        uint _id,
+        string _topicName,
+        address payable wallet
+    );
 
     event PostCreated(
         uint id,
@@ -36,24 +46,23 @@ contract upSpeak {
         address payable author
     );
 
-    constructor() public {
-        name = "upSpeak";
-    }
-
-    function createTopic(string memory _topicName, string memory _authorAddress) public payable{
-        // Fetch the author
-        address charged _author = _topic.author;
+    function createTopic(string memory _topicName) public payable {
+        // Require valid dontent
+        require(bytes(_topicName).length > 0);
+        // Require payment to create new topic
+        address payable _wallet;
+        address(_wallet).transfer(msg.value);
         topicCount += 1;
-        topics[topicCount] = Topic(topicCount, _topicName, _authorAddress);
+        topics[topicCount] = Topic(topicCount, _topicName, msg.sender);
     }
     
-    function createPost(string memory _content) public {
+    function createPost(string memory _content, string memory _topicName) public {
         // Require valid content
         require(bytes(_content).length > 0);
         // Increment the post count
         postCount ++;
         // Create the post
-        posts[postCount] = Post(postCount, _content, 0, msg.sender);
+        posts[postCount] = Post(postCount, _content, 0, msg.sender, _topicName);
         // Trigger event
         emit PostCreated(postCount, _content, 0, msg.sender);
     }
