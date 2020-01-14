@@ -1,4 +1,4 @@
-<a href="coming soon">![upSpeak](img/upSpeak.png)</a>
+<a href="coming soon"><img align="right">![upSpeak](img/upSpeak.png)</img></a>
 <br >
 
 # upSpeak
