@@ -47,7 +47,7 @@ class Main extends Component {
                       </li>
                       <li key={key} className="list-group-item py-2">
                         <small className="float-left mt-1 text-muted">
-                          TIPS: {window.web3.utils.fromWei(post.tipAmount.toString(), 'Ether')} ETH
+                          UP's: {window.web3.utils.fromWei(post.tipAmount.toString(), 'Ether')} ETH
                         </small>
                         <button
                           className="btn btn-link btn-sm float-right pt-0"
@@ -58,7 +58,7 @@ class Main extends Component {
                             this.props.tipPost(event.target.name, tipAmount)
                           }}
                         >
-                          TIP 0.1 ETH
+                          UPit! 0.1 ETH
                         </button>
                       </li>
                     </ul>
