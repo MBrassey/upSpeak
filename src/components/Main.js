@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Identicon from 'identicon.js';
+import logo from '../img/upSpeak.png';
 
 class Main extends Component {
 
@@ -16,6 +17,7 @@ class Main extends Component {
                   this.props.createPost(content)
                 }}>
                 <div className="form-group mr-sm-2">
+                <img src={logo} width="494" height="285" alt="upSpeak" /><br /><br /><br /><br />
                   <input
                     id="postContent"
                     type="text"
