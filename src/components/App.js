@@ -46,7 +46,7 @@ class App extends Component {
           posts: [...this.state.posts, post]
         })
       }
-      // Sort posts. Show highest tipped posts first
+      // Sort posts. Show posts with most up's first
       this.setState({
         posts: this.state.posts.sort((a,b) => b.tipAmount - a.tipAmount )
       })

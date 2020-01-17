@@ -8,7 +8,7 @@ class Main extends Component {
     return (
       <div className="container-fluid mt-5">
         <div className="row">
-          <main role="main" className="col-lg-12 ml-auto mr-auto" style={{ maxWidth: '500px' }}>
+          <main role="main" className="col-lg-12 ml-auto mr-auto" style={{ maxWidth: '504px', background: '#DFE5E8' }}>
             <div className="content mr-auto ml-auto">
               <p>&nbsp;</p>
                 <form onSubmit={(event) => {
@@ -17,7 +17,7 @@ class Main extends Component {
                   this.props.createPost(content)
                 }}>
                 <div className="form-group mr-sm-2">
-                <img src={logo} width="494" height="285" alt="upSpeak" /><br /><br /><br /><br />
+                <img src={logo} width="496" height="301" alt="upSpeak" /><br /><br /><br />
                   <input
                     id="postContent"
                     type="text"
@@ -47,7 +47,7 @@ class Main extends Component {
                       </li>
                       <li key={key} className="list-group-item py-2">
                         <small className="float-left mt-1 text-muted">
-                          UP's: {window.web3.utils.fromWei(post.tipAmount.toString(), 'Ether')} ETH
+                          <strong>up's</strong>: [{window.web3.utils.fromWei(post.tipAmount.toString(), 'Ether')} ETH]
                         </small>
                         <button
                           className="btn btn-link btn-sm float-right pt-0"
@@ -58,7 +58,7 @@ class Main extends Component {
                             this.props.tipPost(event.target.name, tipAmount)
                           }}
                         >
-                          UPit! 0.1 ETH
+                          <strong>up-it!</strong> [0.1 ETH]
                         </button>
                       </li>
                     </ul>
