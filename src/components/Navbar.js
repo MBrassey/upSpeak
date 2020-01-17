@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Identicon from 'identicon.js';
+import Dropdown from 'react-bootstrap/Dropdown'
 
 class Navbar extends Component {
 
