@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Identicon from 'identicon.js';
 import logo from '../img/upSpeak.png';
 
+document.body.style = 'background: #DFE5E8;';
 class Main extends Component {
 
   render() {
