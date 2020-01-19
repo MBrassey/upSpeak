@@ -2,31 +2,27 @@ import React, { Component } from 'react';
 import Identicon from 'identicon.js';
 import Dropdown from 'react-bootstrap/Dropdown'
 import DropdownButton from 'react-bootstrap/DropdownButton'
+import { Icon } from 'semantic-ui-react'
 
 class Navbar extends Component {
 
   render() {
     return (
       <nav className="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
-        <a
-          className="navbar-brand col-sm-3 col-md-2 mr-0"
-          href="https://upSpeak.online"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-        upSpeak
-        </a>
+        
         <Dropdown>
-  <Dropdown.Toggle variant="success" id="dropdown-basic">
-    Topics
-  </Dropdown.Toggle>
+          <Dropdown.Toggle variant="info" id="dropdown-basic">
+           Topics
+          </Dropdown.Toggle>
 
-  <Dropdown.Menu>
-    <Dropdown.Item href="#/action-1">Cats</Dropdown.Item>
-    <Dropdown.Item href="#/action-2">Bitcoin</Dropdown.Item>
-    <Dropdown.Item href="#/action-3">Freedom</Dropdown.Item>
-  </Dropdown.Menu>
-</Dropdown>
+          <Dropdown.Menu>
+           <Dropdown.Item href="#/action-1">Cats</Dropdown.Item>
+           <Dropdown.Item href="#/action-2">Bitcoin</Dropdown.Item>
+           <Dropdown.Item href="#/action-3">Freedom</Dropdown.Item>
+
+          </Dropdown.Menu>
+        </Dropdown>
+
         <ul className="navbar-nav px-3">
           <li className="nav-item text-nowrap d-none d-sm-none d-sm-block">
             <small className="text-secondary">

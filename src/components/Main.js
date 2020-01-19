@@ -17,7 +17,7 @@ class Main extends Component {
                   const content = this.postContent.value
                   this.props.createPost(content)
                 }}>
-                <div className="form-group mr-sm-2">
+                <div className="form-group ">
                 <img src={logo} width="496" height="301" alt="upSpeak" /><br /><br /><br />
                   <input
                     id="postContent"
@@ -27,7 +27,7 @@ class Main extends Component {
                     placeholder="What do you say?"
                     required />
                 </div>
-                <button type="submit" className="btn btn-primary btn-block">Share</button>
+                <button type="submit" className="btn btn-info btn-block">Share</button>
               </form>
               <p>&nbsp;</p>
               { this.props.posts.map((post, key) => {
@@ -51,15 +51,15 @@ class Main extends Component {
                           <strong>up's</strong>: [{window.web3.utils.fromWei(post.tipAmount.toString(), 'Ether')} ETH]
                         </small>
                         <button
-                          className="btn btn-link btn-sm float-right pt-0"
+                          className="btn btn-info btn-sm float-right pt-0"
                           name={post.id}
                           onClick={(event) => {
-                            let tipAmount = window.web3.utils.toWei('0.1', 'Ether')
+                            let tipAmount = window.web3.utils.toWei('0.007', 'Ether')
                             console.log(event.target.name, tipAmount)
                             this.props.tipPost(event.target.name, tipAmount)
                           }}
                         >
-                          <strong>up-it!</strong> [0.1 ETH]
+                          <strong>up-it!</strong> [0.007 ETH]
                         </button>
                       </li>
                     </ul>
