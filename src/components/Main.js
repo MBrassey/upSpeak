@@ -1,6 +1,20 @@
 import React, { Component } from 'react';
 import Identicon from 'identicon.js';
 import logo from '../img/upSpeak.png';
+import eth from '../img/ethicon.png';
+
+const motd = [ 'upSpeak is an Ethereum based Decentralized Social Network!',
+               'upSpeak naturally incentivises high quality posts!', 
+               'upSpeak topics are added by its users!',
+               'upSpeak users pay other users directly by clicking up-it!'
+              ];
+
+function Rand(motd){
+  const keys = Object.keys(motd);
+  let i = keys.length - 1;
+  const j = Math.floor(Math.random() * i);
+  return motd[keys[j]];
+}
 
 document.body.style = 'background: #DFE5E8;';
 class Main extends Component {
@@ -24,7 +38,7 @@ class Main extends Component {
                     type="text"
                     ref={(input) => { this.postContent = input }}
                     className="form-control"
-                    placeholder="What do you say?"
+                    placeholder= {Rand(motd)}
                     required />
                 </div>
                 <button type="submit" className="btn btn-info btn-block">Share</button>
@@ -48,7 +62,7 @@ class Main extends Component {
                       </li>
                       <li key={key} className="list-group-item py-2">
                         <small className="float-left mt-1 text-muted">
-                          <strong>up's</strong>: [{window.web3.utils.fromWei(post.tipAmount.toString(), 'Ether')} ETH]
+                        <img src={eth} width="16" height="26" alt="upSpeak" /> [{window.web3.utils.fromWei(post.tipAmount.toString(), 'Ether')} ETH]
                         </small>
                         <button
                           className="btn btn-info btn-sm float-right pt-0"

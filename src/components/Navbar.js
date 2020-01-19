@@ -4,11 +4,12 @@ import Dropdown from 'react-bootstrap/Dropdown'
 import DropdownButton from 'react-bootstrap/DropdownButton'
 import { Icon } from 'semantic-ui-react'
 
+
 class Navbar extends Component {
 
   render() {
     return (
-      <nav className="navbar navbar-dark fixed-top bg-dark flex-md-nowrap p-0 shadow">
+      <nav className="navbar navbar-dark fixed-top bg-grey flex-md-nowrap p-0 shadow">
         
         <Dropdown>
           <Dropdown.Toggle variant="info" id="dropdown-basic">
