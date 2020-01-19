@@ -16,21 +16,23 @@ const motd = [ 'upSpeak is an Ethereum based Decentralized Social Network!',
                'upSpeak is Autonimous and Decentralized.',
                'upSpeak is Deployed to Ethereum Main Net!',
                'upSpeak is a Blockchain Application.',
-               'up-its! are a Fully Peer-to-Peer Rewards System.',
+               'up-its! are part of a Fully Peer-to-Peer Rewards System.',
                'upSpeak Developers Only get Paid when You Add a Topic.',
                'upSpeak Naturally De-Incentivises Spam.',
                'Whats on Your Mind?',
                'What do You Say?',
                'upSpeak was Made for You.',
+               'The upSpeak Blockchain is Independent of upSpeak.Online. ',
+               'upSpeak is Only as Cool as You Are.',
                'Each upSpeak User has an Equal Leverage on the Network.',
                'upSpeak is a Free Speach Platform.',
                'The Most Appreciated Posts Rise to the Top!',
                'upSpeak Users are Paid Instantly in Ethereum!',
                'Speed Up the Mining of Your Post by Paying a Higher Gas Fee.',
-               'The reward for for one up-it! is 0.007 ETH.',
-               'You can Run your Own upSpeak Web Server.',
+               'The Reward for One up-it! is 0.007 ETH.',
+               'You Can Run Your Own upSpeak Web Server.',
                'All Post & Topics on upSpeak are perminant.',
-               'upSpeak Users pay other Users Directly by Clicking up-it!'
+               'upSpeak Users Pay Other Users Directly by Clicking up-it!'
               ];
 
 function Rand(motd){
