@@ -6,6 +6,10 @@ import eth from '../img/ethicon.png';
 const motd = [ 'upSpeak is an Ethereum based Decentralized Social Network!',
                'upSpeak naturally incentivises high quality posts!', 
                'upSpeak topics are added by its users!',
+               'upSpeak is Opensource and Ad-free!',
+               'Posts on upSpeak can never be deleted or changed!',
+               'upSpeak is 100% censorship resistant!',
+               'upSpeak is literally un-stoppable!',
                'upSpeak users pay other users directly by clicking up-it!'
               ];
 
