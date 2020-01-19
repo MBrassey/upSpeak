@@ -4,13 +4,29 @@ import logo from '../img/upSpeak.png';
 import eth from '../img/ethicon.png';
 
 const motd = [ 'upSpeak is an Ethereum based Decentralized Social Network!',
-               'upSpeak naturally incentivises high quality posts!', 
-               'upSpeak topics are added by its users!',
-               'upSpeak is Opensource and Ad-free!',
-               'Posts on upSpeak can never be deleted or changed!',
-               'upSpeak is 100% censorship resistant!',
-               'upSpeak is literally un-stoppable!',
-               'upSpeak users pay other users directly by clicking up-it!'
+               'upSpeak Naturally Incentivises High Quality Posts!', 
+               'upSpeak Topics are Added by its Users!',
+               'upSpeak is Opensource and Ad-free.',
+               'Content on upSpeak cant be Deleted, Modified or Changed.',
+               'upSpeak is 100% Censorship Resistant.',
+               'upSpeak is Literally Un-Stoppable!',
+               'upSpeak is Powered by Ethereum Smart Contracts!',
+               'upSpeak has No Owners or Employees, only Developers!',
+               'upSpeak is Autonimous and Decentralized.',
+               'upSpeak is Deployed to Ethereum Main Net!',
+               'upSpeak is a Blockchain Application.',
+               'up-its! are a Fully Peer-to-Peer Rewards System.',
+               'upSpeak Developers Only get Paid when You Add a Topic.',
+               'upSpeak Naturally De-Incentivises Spam.',
+               'Whats on Your Mind?',
+               'What do You Say?',
+               'The Most Appreciated Posts Rise to the Top!',
+               'upSpeak Users are Paid Instantly in Ethereum!',
+               'Speed Up the Mining of Your Post by Paying a Higher Gas Fee.',
+               'The reward for for one up-it! is 0.007 ETH.',
+               'You can Run your Own upSpeak Web Server.',
+               'All Post & Topics on upSpeak are perminant.',
+               'upSpeak Users pay other Users Directly by Clicking up-it!'
               ];
 
 function Rand(motd){
@@ -66,7 +82,7 @@ class Main extends Component {
                       </li>
                       <li key={key} className="list-group-item py-2">
                         <small className="float-left mt-1 text-muted">
-                        <img src={eth} width="16" height="26" alt="upSpeak" /> [{window.web3.utils.fromWei(post.tipAmount.toString(), 'Ether')} ETH]
+                        <img src={eth} width="9" height="14" alt="upSpeak" /> [{window.web3.utils.fromWei(post.tipAmount.toString(), 'Ether')} ETH]
                         </small>
                         <button
                           className="btn btn-info btn-sm float-right pt-0"
