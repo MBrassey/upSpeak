@@ -26,6 +26,36 @@ contract('SocialNetwork', ([deployer, author, tipper]) => {
     })
   })
 
+  describe('topics', async () => {
+    let result, topicCount
+
+    before(async () => {
+      result = await socialNetwork.createTopic('Topic1', { from: author })
+      topicCount = await socialNetwork.topicCount()
+    })
+
+    it('creates topics', async () => {
+      // SUCESS
+      assert.equal(topicCount, 1)
+      const event = result.logs[0].args
+      assert.equal(event.id.toNumber(), topicCount.toNumber(), 'id is correct')
+      assert.equal(event.topicName, 'Topic1', 'topicname is correct')
+      assert.equal(event.tipAmount2, '0', 'tip amount is correct')
+      assert.equal(event.author, author, 'author is correct')
+
+      // FAILURE: Post must have content
+      await socialNetwork.createTopic('', { from: author }).should.be.rejected;
+    })
+
+    it('lists topics', async () => {
+      const post = await socialNetwork.topics(topicCount)
+      assert.equal(post.id.toNumber(), topicCount.toNumber(), 'id is correct')
+      assert.equal(post.topicName, 'Topic1', 'content is correct')
+      assert.equal(post.tipAmount2, '0', 'tip amount is correct')
+      assert.equal(post.author, author, 'author is correct')
+    })
+  })
+
   describe('posts', async () => {
     let result, postCount
 
