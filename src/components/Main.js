@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Identicon from 'identicon.js';
-import logo from '../img/upSpeak.png';
 import eth from '../img/ethicon.png';
+const logo = 'https://spee.ch/8/upSpeak1.png'
 
 const motd = [ 'upSpeak is an Ethereum based Decentralized Social Network!',
                'upSpeak Naturally Incentivises High Quality Posts!', 
@@ -18,9 +18,11 @@ const motd = [ 'upSpeak is an Ethereum based Decentralized Social Network!',
                'upSpeak is a Blockchain Application.',
                'up-its! are part of a Fully Peer-to-Peer Rewards System.',
                'upSpeak Developers Only get Paid when You Add a Topic.',
-               'upSpeak Naturally De-Incentivises Spam.',
+               'upSpeak Naturally De-Incentivises Spam & Illicit Content.',
                'Whats on Your Mind?',
                'What do You Say?',
+               'upSpeaks Logo and images are hosted on the LBRY blockchain!',
+               'upSpeak is Experimental, Users Choose All of the Content.',
                'upSpeak was Made for You.',
                'The upSpeak Blockchain is Independent of upSpeak.Online. ',
                'upSpeak is Only as Cool as You Are.',
@@ -57,8 +59,9 @@ class Main extends Component {
                   const content = this.postContent.value
                   this.props.createPost(content)
                 }}>
-                <div className="form-group ">
-                <img src={logo} width="496" height="301" alt="upSpeak" /><br /><br /><br />
+                <div className="form-group">
+                <img src={logo} width="496" height="301" alt="upSpeak" />
+                <p>&nbsp;</p>
                   <input
                     id="postContent"
                     type="text"

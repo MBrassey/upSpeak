@@ -5,12 +5,18 @@ import DropdownButton from 'react-bootstrap/DropdownButton'
 import { Icon } from 'semantic-ui-react'
 
 
+function topicLoad() {
+  return(
+    <Dropdown.Item href="#/action-1">Topic1</Dropdown.Item> 
+  )
+}
+
 class Navbar extends Component {
 
   render() {
     return (
       <nav className="navbar navbar-dark fixed-top bg-grey flex-md-nowrap p-0 shadow">
-        
+
         <Dropdown>
           <Dropdown.Toggle variant="info" id="dropdown-basic">
            Topics
@@ -44,5 +50,6 @@ class Navbar extends Component {
     );
   }
 }
+
 
 export default Navbar;
