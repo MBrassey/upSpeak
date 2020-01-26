@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Identicon from 'identicon.js';
-import eth from '../img/ethicon.png';
 const logo = 'https://spee.ch/8/upSpeak1.png'
+const eth = 'https://spee.ch/f/ethicon.png'
 
 const motd = [ 'upSpeak is an Ethereum based Decentralized Social Network!',
                'upSpeak Naturally Incentivises High Quality Posts!', 
