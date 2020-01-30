@@ -37,17 +37,8 @@ class App extends Component {
     if(networkData) {
       const socialNetwork = web3.eth.Contract(SocialNetwork.abi, networkData.address)
       this.setState({ socialNetwork })
-      const topicCount = await socialNetwork.methods.topicCount().call()
       const postCount = await socialNetwork.methods.postCount().call()
-      this.setState({ topicCount })
       this.setState({ postCount })
-      // Load Topics
-      for (var i = 1; i <= topicCount; i++) {
-        const topic = await socialNetwork.methods.topics(i).call()
-        this.setState({
-          topics: [...this.state.topics, topic]
-        })
-      }
       // Load Posts
       for (var i = 1; i <= postCount; i++) {
         const post = await socialNetwork.methods.posts(i).call()
@@ -55,11 +46,6 @@ class App extends Component {
           posts: [...this.state.posts, post]
         })
       }
-      // Sort topics. Show topics with most up's first
-      this.setState({
-        topics: this.state.topics.sort((a,b) => b.tipAmount - a.tipAmount )
-      })
-      this.setState({ loading: false})
       // Sort posts. Show posts with most up's first
       this.setState({
         posts: this.state.posts.sort((a,b) => b.tipAmount - a.tipAmount )
@@ -68,22 +54,6 @@ class App extends Component {
     } else {
       window.alert('SocialNetwork contract not deployed to detected network.')
     }
-  }
-
-  createTopic(topicName) {
-    this.setState({ loading: true })
-    this.state.socialNetwork.methods.createTopic(topicName).send({ from: this.state.account })
-    .once('receipt', (receipt) => {
-      this.setState({ loading: false })
-    })
-  }
-
-  tipTopic(id, tipAmount2) {
-    this.setState({ loading: true })
-    this.state.socialNetwork.methods.tipTopic(id).send({ from: this.state.account, value: tipAmount2 })
-    .once('receipt', (receipt) => {
-      this.setState({ loading: false })
-    })
   }
 
   createPost(content) {
@@ -107,14 +77,11 @@ class App extends Component {
     this.state = {
       account: '',
       socialNetwork: null,
-      topicCount: 0,
       postCount: 0,
-      topics: [],
       posts: [],
       loading: true
     }
-    this.createTopic = this.createTopic.bind(this)
-    this.tipTopic = this.tipTopic.bind(this)
+
     this.createPost = this.createPost.bind(this)
     this.tipPost = this.tipPost.bind(this)
   }
@@ -126,9 +93,6 @@ class App extends Component {
         { this.state.loading
           ? <div id="loader" className="text-center mt-5"><p>Loading...</p></div>
           : <Main
-              topics={this.state.topics}
-              createTopic={this.createTopic}
-              tipTopic={this.tipTopic}
               posts={this.state.posts}
               createPost={this.createPost}
               tipPost={this.tipPost}
