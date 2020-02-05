@@ -1,4 +1,4 @@
-<img align="right" width="496" height="301" src="https://spee.ch/8/upSpeak1.png">
+<img align="right" width="377" height="217" src="https://spee.ch/8/upSpeak1.png">
 <br >
 
 # upSpeak
