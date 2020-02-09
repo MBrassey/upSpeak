@@ -33,7 +33,7 @@ const motd = [ 'upSpeak is an Ethereum based Decentralized Social Network!',
                'Speed Up the Mining of Your Post by Paying a Higher Gas Fee.',
                'The Reward for One up-it! is 0.007 ETH.',
                'You Can Run Your Own upSpeak Web Server.',
-               'All Post & Topics on upSpeak are perminant.',
+               'All Post & Topics on upSpeak are permanently stored.',
                'upSpeak Users Pay Other Users Directly by Clicking up-it!'
               ];
 

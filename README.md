@@ -1,5 +1,5 @@
 # upSpeak
-Ethereum based Decentralized Social Network &amp; Community powered Free Speech Platform.
+Ethereum Powered Decentralized Social Network &amp; Free Speech Platform.
 <br />
 <br />
 
