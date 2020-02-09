@@ -3,3 +3,5 @@
 
 # upSpeak
 Ethereum based Decentralized Social Network &amp; Community powered Free Speech Platform.
+
+<img align="middle" src="upSpeak.gif">
