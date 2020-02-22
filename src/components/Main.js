@@ -59,7 +59,6 @@ class Main extends Component {
                   this.props.createPost(content)
                 }}>
                 <div className="form-group">
-                <img src={logo} width="496" height="301" alt="upSpeak" />
                 <p>&nbsp;</p>
                   <input
                     id="postContent"
@@ -81,6 +80,7 @@ class Main extends Component {
                         width='30'
                         height='30'
                         src={`data:image/png;base64,${new Identicon(post.author, 30).toString()}`}
+                        alt='avatar'
                       />
                       <small className="text-muted">{post.author}</small>
                     </div>

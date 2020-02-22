@@ -18,7 +18,7 @@ class Navbar extends Component {
       <nav className="navbar navbar-dark fixed-top bg-grey flex-md-nowrap p-0 shadow">
 
         <Dropdown>
-          <Dropdown.Toggle variant="info" id="dropdown-basic">
+          <Dropdown.Toggle variant="info" id="dropdown-topics">
            Topics
           </Dropdown.Toggle>
 
@@ -29,6 +29,8 @@ class Navbar extends Component {
 
           </Dropdown.Menu>
         </Dropdown>
+
+        <Icon></Icon>
 
         <ul className="navbar-nav px-3">
           <li className="nav-item text-nowrap d-none d-sm-none d-sm-block">
@@ -41,6 +43,7 @@ class Navbar extends Component {
                 width='30'
                 height='30'
                 src={`data:image/png;base64,${new Identicon(this.props.account, 30).toString()}`}
+                alt='avatar'
               />
               : <span></span>
             }
