@@ -4,7 +4,7 @@ Ethereum Powered Decentralized Social Network &amp; Free Speech Platform.
 
 ![licensebadge](https://img.shields.io/badge/license-CC0_1.0_Universal-blue)
 
-<h6><p align="right">:cyclone: Click the image(s) below to view the live <a id="Screenshots" href="https://MBrassey.github.io/READMEGenesis/">webapplication</a></p></h6>
+<h6><p align="right">:cyclone: Click the image(s) below to view the live <a id="Screenshots" href="https://upspeak.herokuapp.com/">webapplication</a></p></h6>
 
 [<img src="upSpeak.gif">](https://brassey.io/)
 
