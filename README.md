@@ -6,7 +6,7 @@ Ethereum Powered Decentralized Social Network &amp; Free Speech Platform.
 
 <h6><p align="right">:cyclone: Click the image(s) below to view the live <a id="Screenshots" href="https://upspeak.herokuapp.com/">webapplication</a></p></h6>
 
-[<img src="upSpeak.gif">](https://brassey.io/)
+[<img src="upSpeak.gif">](https://upspeak.herokuapp.com/)
 
 #### Questions
 Contact me at [matt@brassey.io](mailto:matt@brassey.io) with any questions or comments.
